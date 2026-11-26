@@ -4,7 +4,11 @@
 
 class Board {
 	private:
-		std::vector<std::unique_ptr<Tile>>	tiles;
+		std::array<Tile, BOARD_SIZE * BOARD_SIZE> tiles;
 	public:
 		Board();
+		PlayerColor at(int x, int y);
+		void display();
+		void place(int x, int y, PlayerColor pl);
 };
+

@@ -3,7 +3,9 @@
 
 class Tile {
 	private:
-		PlayerColor clr;
+		PlayerColor clr = EMPTY;
 	public:
 		Tile();
+		PlayerColor getColor();
+		void setColor(PlayerColor);
 };

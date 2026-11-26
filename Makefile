@@ -40,17 +40,17 @@ INCLUDE_DIR			=	includes/
 
 INCLUDES			=	$(INCLUDE_DIR) \
 							$(addprefix $(INCLUDE_DIR), \
-							$(STB_IMAGE_DIR) \
-							$(OBJECTS_DIR) \
-							$(PARSE_DIR) \
-							$(TUPLE_DIR) \
-							$(MATRIX_DIR) \
-							$(WORLD_DIR) \
-							$(OPENGL_HANDLING) \
+							$(CLASSES_DIR) \
 							)
+
+CLASSES_SRC			=	$(addprefix $(CLASSES_DIR), \
+						Board.cpp \
+						Tile.cpp \
+						)
 
 SRC_FILES_CPP			=	$(addprefix $(SRC_DIR), \
 						main.cpp \
+						$(CLASSES_SRC) \
 						)
 
 
